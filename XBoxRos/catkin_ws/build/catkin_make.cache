@@ -1,0 +1,2 @@
+xbox_control
+-DCATKIN_DEVEL_PREFIX=/home/ricky/Projects/ROS/XBoxRos/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ricky/Projects/ROS/XBoxRos/catkin_ws/install -G Unix Makefiles

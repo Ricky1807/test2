@@ -1,0 +1,2 @@
+rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/ricky/Projects/ROS/Rplidar/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ricky/Projects/ROS/Rplidar/catkin_ws/install -G Unix Makefiles

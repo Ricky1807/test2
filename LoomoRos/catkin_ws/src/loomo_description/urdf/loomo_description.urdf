@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="loomo_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="4.9826E-08 0.025631 -0.0002827"
+        rpy="0 0 0" />
+      <mass
+        value="8.1198" />
+      <inertia
+        ixx="0.0553"
+        ixy="-8.384E-09"
+        ixz="4.5635E-09"
+        iyy="0.099572"
+        iyz="-0.0001551"
+        izz="0.086303" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_center_ground_frame">
+    <inertial>
+      <origin
+        xyz="-0.000282698549553816 4.9825976440378E-08 0.0256311634763029"
+        rpy="0 0 0" />
+      <mass
+        value="8.11976367999664" />
+      <inertia
+        ixx="0.0863025371679234"
+        ixy="4.56349683833395E-09"
+        ixz="-0.000155096629108099"
+        iyy="0.0553002679552578"
+        iyz="-8.38399922388104E-09"
+        izz="0.0995717359744463" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/base_center_ground_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/base_center_ground_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_center_ground_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_center_ground_frame" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="neck_center_body_internal_frame">
+    <inertial>
+      <origin
+        xyz="-0.0278956013169349 -1.14276232202913E-07 -0.111798627558357"
+        rpy="0 0 0" />
+      <mass
+        value="3.11514141317435" />
+      <inertia
+        ixx="0.0143276231172362"
+        ixy="-3.99326411595429E-08"
+        ixz="-0.00155032728411974"
+        iyy="0.0181814342711786"
+        iyz="-3.37243882499783E-09"
+        izz="0.00832949660020289" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/neck_center_body_internal_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/neck_center_body_internal_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_center_body_internal_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.38"
+      rpy="0 0 0" />
+    <parent
+      link="base_center_ground_frame" />
+    <child
+      link="neck_center_body_internal_frame" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="neck_center_body_yaw_frame">
+    <inertial>
+      <origin
+        xyz="-0.000828132734955685 2.86609496269648E-07 0.0545783254314435"
+        rpy="0 0 0" />
+      <mass
+        value="0.996259052147996" />
+      <inertia
+        ixx="0.00831138012927765"
+        ixy="2.69662622187785E-08"
+        ixz="3.19528814787695E-10"
+        iyy="0.00202259909767355"
+        iyz="1.19629859113275E-08"
+        izz="0.00779786011946472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/neck_center_body_yaw_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/neck_center_body_yaw_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_center_body_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="-0.024672 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="neck_center_body_internal_frame" />
+    <child
+      link="neck_center_body_yaw_frame" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rsdepth_center_neck_fix_frame">
+    <inertial>
+      <origin
+        xyz="0.00250000000000001 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="9.81747704246811E-05" />
+      <inertia
+        ixx="3.06796157577129E-10"
+        ixy="-8.61646471409404E-27"
+        ixz="-1.18574757816703E-42"
+        iyy="3.5792885050665E-10"
+        iyz="-3.88938454866321E-58"
+        izz="3.5792885050665E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/rsdepth_center_neck_fix_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/rsdepth_center_neck_fix_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rsdepth_center_neck_fix_joint"
+    type="fixed">
+    <origin
+      xyz="0.049172 -0.02 0.012907"
+      rpy="0 0 0" />
+    <parent
+      link="neck_center_body_yaw_frame" />
+    <child
+      link="rsdepth_center_neck_fix_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rscolor_center_neck_fix_frame">
+    <inertial>
+      <origin
+        xyz="0.00250000000000001 6.93889390390723E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="9.81747704246811E-05" />
+      <inertia
+        ixx="3.06796157577129E-10"
+        ixy="-8.61646471409404E-27"
+        ixz="-1.18574757816703E-42"
+        iyy="3.5792885050665E-10"
+        iyz="-3.88938454866321E-58"
+        izz="3.5792885050665E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/rscolor_center_neck_fix_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/rscolor_center_neck_fix_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rscolor_center_neck_fix_joint"
+    type="fixed">
+    <origin
+      xyz="0.049172 -0.04 0.012907"
+      rpy="0 0 0" />
+    <parent
+      link="neck_center_body_yaw_frame" />
+    <child
+      link="rscolor_center_neck_fix_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="head_center_neck_pitch_frame">
+    <inertial>
+      <origin
+        xyz="-0.00114448581858739 5.18459807645892E-09 -0.025368274737453"
+        rpy="0 0 0" />
+      <mass
+        value="0.977813834278322" />
+      <inertia
+        ixx="0.00224281696044669"
+        ixy="-3.87316176779403E-10"
+        ixz="2.24235415527069E-10"
+        iyy="0.0010893701940155"
+        iyz="-4.75870304185978E-10"
+        izz="0.00229161439640982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/head_center_neck_pitch_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/head_center_neck_pitch_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_center_neck_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.024672 0 0.089144"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="neck_center_body_yaw_frame" />
+    <child
+      link="head_center_neck_pitch_frame" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="platform_center_head_fix_frame">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -6.93889390390723E-18 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="9.81747704246811E-05" />
+      <inertia
+        ixx="3.5792885050665E-10"
+        ixy="-3.88938454866321E-58"
+        ixz="-1.18574757816703E-42"
+        iyy="3.5792885050665E-10"
+        iyz="-8.61646471409405E-27"
+        izz="3.06796157577129E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/platform_center_head_fix_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/platform_center_head_fix_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="platform_center_head_fix_joint"
+    type="fixed">
+    <origin
+      xyz="0.0046826 0.04 0.0145"
+      rpy="0 0 0" />
+    <parent
+      link="head_center_neck_pitch_frame" />
+    <child
+      link="platform_center_head_fix_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wheel_frame">
+    <inertial>
+      <origin
+        xyz="-5.83977248643685E-10 0.00159192387976809 2.61420104086719E-09"
+        rpy="0 0 0" />
+      <mass
+        value="4.17662159562663" />
+      <inertia
+        ixx="0.0209332395777932"
+        ixy="-7.06480372567567E-11"
+        ixz="1.97259405847453E-07"
+        iyy="0.0383274182189435"
+        iyz="2.60224084208917E-10"
+        izz="0.020930447790628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/left_wheel_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/left_wheel_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.22519 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_frame" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_wheel_frame">
+    <inertial>
+      <origin
+        xyz="5.84026906800422E-10 0.00292642915255981 2.61420569308923E-09"
+        rpy="0 0 0" />
+      <mass
+        value="4.17662159562663" />
+      <inertia
+        ixx="0.0209332395777932"
+        ixy="-7.06443898116689E-11"
+        ixz="-1.97259405847807E-07"
+        iyy="0.038327415469301"
+        iyz="-2.60224713784043E-10"
+        izz="0.0209304450409855" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/right_wheel_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://loomo_description/meshes/right_wheel_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="-0.22971 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_frame" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

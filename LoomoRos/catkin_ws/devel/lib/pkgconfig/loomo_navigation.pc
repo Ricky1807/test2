@@ -1,0 +1,8 @@
+prefix=/home/ricky/Projects/ROS/LoomoRos/catkin_ws/devel
+
+Name: loomo_navigation
+Description: Description of loomo_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

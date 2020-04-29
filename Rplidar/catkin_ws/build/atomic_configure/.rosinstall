@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ricky/Projects/ROS/Rplidar/catkin_ws/devel/setup.sh

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ricky/Projects/ROS/LoomoRos/catkin_ws/install/setup.sh

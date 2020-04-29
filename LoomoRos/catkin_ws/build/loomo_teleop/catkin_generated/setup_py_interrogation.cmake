@@ -1,0 +1,6 @@
+set(loomo_teleop_SETUP_PY_VERSION "1.2.3")
+set(loomo_teleop_SETUP_PY_SCRIPTS "")
+set(loomo_teleop_SETUP_PY_PACKAGES "loomo_teleop")
+set(loomo_teleop_SETUP_PY_PACKAGE_DIRS "src/loomo_teleop")
+set(loomo_teleop_SETUP_PY_MODULES "")
+set(loomo_teleop_SETUP_PY_MODULE_DIRS "")

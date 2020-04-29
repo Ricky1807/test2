@@ -1,0 +1,8 @@
+prefix=/home/ricky/Projects/ROS/LoomoRos/catkin_ws/devel
+
+Name: loomo_description
+Description: Description of loomo_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

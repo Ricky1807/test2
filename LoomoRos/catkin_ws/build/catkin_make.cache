@@ -1,0 +1,2 @@
+loomo_description:loomo_navigation:loomo_slam:loomo_teleop:rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/ricky/Projects/ROS/LoomoRos/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ricky/Projects/ROS/LoomoRos/catkin_ws/install -G Unix Makefiles

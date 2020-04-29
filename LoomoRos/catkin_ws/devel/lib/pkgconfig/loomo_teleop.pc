@@ -1,0 +1,8 @@
+prefix=/home/ricky/Projects/ROS/LoomoRos/catkin_ws/devel
+
+Name: loomo_teleop
+Description: Description of loomo_teleop
+Version: 1.2.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy geometry_msgs
